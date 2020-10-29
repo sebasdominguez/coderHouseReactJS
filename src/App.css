@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.cart {
+  width: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.itemCount {
+  display: flex;
+  flex-direction: row;
+  z-index: 100000;
+}
+
+.total {
+  width: 75px;
+}
