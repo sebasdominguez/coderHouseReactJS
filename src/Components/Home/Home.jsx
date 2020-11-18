@@ -1,13 +1,13 @@
 import React from 'react'
-import CountContainer from '../../Containers/CountContainer'
+import ItemContainer from '../../Containers/itemsContainer'
 
-export default function Home({greeting, name}) {
 
+export default function Home() {
+    
     return (
         <div className="App">
             <header className="App-header">
-                <p>{greeting} {name}</p>
-                <CountContainer min='0' max='10'/>
+                <ItemContainer/>
             </header>
         </div>
     )

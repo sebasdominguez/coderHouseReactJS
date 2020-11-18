@@ -1,12 +1,10 @@
-import React from "react";
+import React from "react"
 import Home from '../Components/Home/Home'
 
-const HomeContainer = ({greeting}) => {
-
-  const usuario = 'Sebastian'
+const HomeContainer = () => {
 
  return (
-      <Home greeting={greeting} name={usuario}/>
+      <Home/>
  )
 
 } 

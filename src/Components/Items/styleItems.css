@@ -1,0 +1,18 @@
+.price{
+    background-color: #6d6daf;
+}
+
+.contItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.contador{
+    width: fit-content;
+}
+
+.card{
+    background-color: #6c53538f !important;
+}

@@ -1,4 +1,12 @@
 .count{
     display: flex;
     flex-direction: row;
+    //background-color: goldenrod;
+    color: black;
+}
+
+.contador{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }

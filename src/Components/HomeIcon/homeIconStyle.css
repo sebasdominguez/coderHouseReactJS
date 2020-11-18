@@ -1,0 +1,12 @@
+.homeIconContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.iconHome {
+    width: 85px;
+    cursor: pointer;
+  }

@@ -1,5 +1,3 @@
-
-
 .navStyle-classic{
     width:100%;
     height:100px;
@@ -36,4 +34,22 @@ li:hover{
     font-size: 1.2rem;
     transition: font-size 0.5s ease, color 1s ease;
     color: red;
+}
+
+.to-vip{
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    color: blueviolet;
+}
+
+.to-classic{
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    color: orange;
+}
+
+.buttonVip{
+    border-radius: 10px;
 }

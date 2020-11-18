@@ -52,3 +52,24 @@
 .total {
   width: 75px;
 }
+
+.colorVip{
+  background-color: #6d6daf;
+}
+
+.colorClassic{
+  background-color:orange;
+}
+
+.links{
+  color: inherit;
+}
+
+.links:hover{
+  text-decoration: none;
+  color: orange;
+}
+
+.activeLink{
+  color:red;
+}

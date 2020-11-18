@@ -2,14 +2,17 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 import './count.css'
 
-export default function Count({contador, onAdd, sumar}) {
+function Count({contador, handleCount}) {
+
     return (
         <div className='count'>
-            <Button variant="danger" className='mr-4' onClick={()=>onAdd('-')}> - </Button>
+            <Button variant="danger" className='mr-4' onClick={()=>handleCount("-")} > - </Button>
             <div>
                 {contador}
             </div>
-            <Button variant="success" className='ml-4' onClick={()=>onAdd('+')}> + </Button>
+            <Button variant="success" className='ml-4' onClick={()=>handleCount("+")}> + </Button>
         </div>
     )
 }
+
+export default Count;
