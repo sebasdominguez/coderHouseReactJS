@@ -13,6 +13,13 @@
     width: fit-content;
 }
 
-.card{
-    background-color: #6c53538f !important;
+.cardItem{
+  transition: box-shadow .3s;
+  border-radius:10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+}
+.cardItem:hover{
+  box-shadow: 0 0 20px rgba(255, 60, 60, 0.5); 
 }
