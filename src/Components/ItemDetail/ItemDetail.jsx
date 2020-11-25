@@ -3,7 +3,7 @@ import { Spinner, Card, Button, Carousel } from 'react-bootstrap'
 import Contador from '../../Containers/CountContainer'
 import './itemDetailStyle.css'
 
-export default function ItemDetail({item, loading, contador, setContador}) {
+export default function ItemDetail({item, loading, contador, setContador, handleComprar}) {
 
     return (
         loading ? 
@@ -31,7 +31,7 @@ export default function ItemDetail({item, loading, contador, setContador}) {
                     </div>
                     {
                         contador > 0 ? 
-                            <Button variant="primary">Comprar {contador}</Button>
+                            <Button variant="primary" onClick={handleComprar}>Comprar {contador}</Button>
                             :
                             <Button variant="primary" onClick={()=>setContador(contador+1)}>Quiero!</Button>
                     }

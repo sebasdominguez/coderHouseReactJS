@@ -1,12 +1,9 @@
 import React from 'react'
 import { Card, Spinner } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Contador from '../../Containers/CountContainer'
 import './styleItems.css'
 
 export default function Items({objetos}) {
-
-    console.log(objetos)
     
     return (
         <div className="contItems">

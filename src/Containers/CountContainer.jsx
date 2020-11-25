@@ -7,7 +7,7 @@ export default function CountContainer({min, max, contador, setContador}) {
     const [show, setShow] = useState(false);
 
     const handleContador = (sign) => {
-        if ( (sign === '+') && ((contador == max)) ) setShow(true) 
+        if ( (sign === '+') && ((contador === max)) ) setShow(true) 
         if ( (sign === '+') && ((contador < max)) ) setContador(contador+1)
         else if ( (sign === '-') && (contador > min) ) setContador(contador-1)
     }
