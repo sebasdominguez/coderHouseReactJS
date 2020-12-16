@@ -10,3 +10,6 @@ Con el avance de las clases, se ira completando el proyecto de E-Commerce
 
 3) Al finalizar la instalación, corré `npm-start`. El proyecto será visible desde [http://localhost:3000](http://localhost:3000)
 
+### Techs
+React
+Firebase
