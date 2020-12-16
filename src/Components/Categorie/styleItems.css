@@ -1,0 +1,29 @@
+.price{
+    background-color: #6d6daf;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.price:hover{
+  color: pink;
+}
+
+.contCateg{
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #efe7e7;
+}
+
+.cardItem{
+  transition: box-shadow .3s;
+  border-radius:10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  float: left;
+}
+.cardItem:hover{
+  box-shadow: 0 0 20px rgba(255, 60, 60, 0.5); 
+}

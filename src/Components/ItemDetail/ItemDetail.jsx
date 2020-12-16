@@ -14,7 +14,7 @@ export default function ItemDetail({item, loading, contador, setContador, handle
                 <Card.Header>Detalles del Producto</Card.Header>
                 <Card.Body>
                     <Card.Title>{item.title}</Card.Title>
-                    <Card.Text> Ubicación: {item.location.city.name},{item.location.country.name}</Card.Text>
+                    <Card.Text> {item.description}</Card.Text>
                     <Carousel interval={1000} pause={'hover'}>
                         {item.pictures && item.pictures.map((picture)=>
                             <Carousel.Item key={picture.id}>
@@ -26,8 +26,9 @@ export default function ItemDetail({item, loading, contador, setContador, handle
                             </Carousel.Item>
                         )}
                     </Carousel>
+                   
                     <div className="contadorItem">
-                        <Contador min='0' max={item.available_quantity} contador={contador} setContador={setContador}>Agregar</Contador>
+                        <Contador min='0' max={item.stock} contador={contador} setContador={setContador}>Agregar</Contador>
                     </div>
                     {
                         contador > 0 ? 
@@ -36,7 +37,7 @@ export default function ItemDetail({item, loading, contador, setContador, handle
                             <Button variant="primary" onClick={()=>setContador(contador+1)}>Quiero!</Button>
                     }
                 </Card.Body>
-                <Card.Footer className="text-white">{item.available_quantity} en Stock!</Card.Footer>
+                <Card.Footer className="text-white">{item.stock} en Stock!</Card.Footer>
                 </Card>
             </div>
         )

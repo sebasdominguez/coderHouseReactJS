@@ -10,6 +10,8 @@ const CartIcon = (props) => {
 
   const [cartItems] = useContext(Context) 
 
+  console.log("cartItems",cartItems)
+
   return ( 
     <div className='cartContainer'>
       <div className='carrito'>

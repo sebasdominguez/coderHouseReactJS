@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import { Context } from '../context/cartContext';
+import { getFirestore } from '../firebase';
 import ItemDetail from '../Components/ItemDetail/ItemDetail'
 
 const ItemDetailContainer = ()=> {
@@ -10,22 +11,28 @@ const ItemDetailContainer = ()=> {
     const [contador, setContador] = useState(0)
     const [, setCartItems] = useContext(Context) 
 
-    useEffect(()=>{
-        fetch(`https://api.mercadolibre.com/items/${id}?include_attributes=all`)
-        .then((item)=>{
-            return item.json()
-        })
-        .then((itemJson)=>{
-            setItem(itemJson)
-        })
-        .catch((error) => {
-            console.log("Error al buscar el Item en la API: ", error);
-        })
-        .finally(() => {
-            setLoading(false);
-        })
-        //eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    useEffect(() => {
+        setLoading(true);
+        const db = getFirestore();
+        const itemCollection = db.collection('items');
+        console.log("id itemContainter",id)
+        const item = itemCollection.doc(id);
+        item.get()
+            .then((doc) => {
+                if (!doc.exists) {
+                    console.log('El doc no existe');
+                    return true;
+                }
+                const dataQuery = doc.data();
+                setItem({ id: doc.id, ...doc.data() });
+            })
+            .catch((error) =>{
+                console.log('Ocurrio un error', error);
+            })
+            .finally(() => {
+                setLoading(false);
+            })
+    }, [id]);
 
     const handleComprar = () => {
         setCartItems(currentCart => [...currentCart, item])
