@@ -6,6 +6,7 @@ import ItemDetailContainer from './Containers/ItemDetailContainer';
 import CategoryContainer from './Containers/CategoryContainer';
 import CatContainer from './Containers/CatContainer';
 import CartContext from './context/cartContext'
+import Top3Container from './Containers/Top3';
 import { NavBar } from './Components/NavbarAfter/Navbar'
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
             <Route exact path='/categories/:id' component={CatContainer}/>
             <Route path='/categories' component={CategoryContainer}/>
             <Route path='/cart' render={() => <CartContainer />}/>
+            <Route path='/top3' component={Top3Container}/>
             <Route path='/' render={() => <HomeContainer />} />
           </Switch>
         </BrowserRouter>

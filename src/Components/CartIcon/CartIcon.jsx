@@ -13,21 +13,20 @@ const CartIcon = (props) => {
   console.log("cartItems",cartItems)
 
   return ( 
-    <div className='cartContainer'>
-      <div className='carrito'>
-        <Link to='/cart'>
-          <img src={cart} className="cart" alt="cart" />
-        </Link>
-        <div>
-          <Badge variant="secondary">
-            {cartItems.length > 0 && cartItems.length}
-          </Badge>
+    <Link to='/cart' className="links">
+      <div className='cartContainer'>
+        <div className='carrito'>
+            <img src={cart} className="cart" alt="cart" />
+          <div>
+            <Badge variant="secondary">
+              {cartItems.length > 0 && cartItems.length}
+            </Badge>
+          </div>
         </div>
+        <p className="greet">{props.greeting} {props.name || <Skeleton duration={1} width={100} circle={true}/> }</p>
       </div>
-      <p>{props.greeting} {props.name || <Skeleton duration={1} width={100} circle={true}/> }</p>
-    </div>
+    </Link>
     )
-
 } 
 
 export default CartIcon;

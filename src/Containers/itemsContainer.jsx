@@ -24,17 +24,6 @@ const ItemContainer = () => {
         })
     }, []);
 
-    useEffect(()=>{
-      console.log(itemsdb,"itemsdb")
-    },[itemsdb])
-
-
-    // useEffect(()=>{
-    //     fetch('https://api.mercadolibre.com/sites/MLA/search?category=MLA1743&limit=20')
-    //     .then((response) => response.json())
-    //     .then((data) => setObjetos(data.results));
-    //   }, [])
-
     return (
           <Items objetos={itemsdb}/>
     )

@@ -1,0 +1,38 @@
+.cartPageStyle{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #e5ffe1;
+    padding-top: 25vh;
+}
+
+.noItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+}
+
+.textNoItems{
+    font-family: cursive;
+    text-transform: uppercase;
+    font-size: x-large;
+    color: blueviolet;
+}
+
+.btn-success {
+    background-color: #ff8d8d;
+    border-color: #ff8d8d;
+}
+
+.btn-success:hover {
+    background-color: #af2525;
+    border-color: #af2525;
+}
+
+.tableCart{
+    width: 70%;
+}

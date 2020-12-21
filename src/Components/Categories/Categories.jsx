@@ -11,7 +11,9 @@ export default function Categories({list}) {
                 <Card style={{ width: '18rem', textAlign: 'center' }}>
                     <Card.Body>
                         <Card.Title style={{ textTransform: 'uppercase' }}>{cat.name}</Card.Title>
-                        <Card.Img variant="top" src={cat.image} />
+                        <Card.Link href={`/categories/${cat.id}`}>
+                            <Card.Img variant="top" src={cat.image} />
+                        </Card.Link>
                         <Card.Text>
                         {cat.description}
                         </Card.Text>

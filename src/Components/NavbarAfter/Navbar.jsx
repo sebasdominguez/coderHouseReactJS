@@ -29,21 +29,24 @@ export function NavBar({ type, setTipo }) {
   return (
     <div className={`navStyle-${type}`}>
       <ul className="ulStyle">
-        <HomeIcon />
+        <div className='conte'>
+          <span className='irHome'>
+            <NavLink to='/' activeClassName='activeLink' className='links'>
+                <HomeIcon />
+                <span className='border border-top'></span>
+                <span className='border border-right'></span>
+                <span className='border border-bottom'></span>
+                <span className='border border-left'></span>
+            </NavLink>
+          </span>
+        </div>
         <NavLink to='/categories' activeClassName='activeLink' className='links'>
           <li>Categories</li>
         </NavLink>
-        <NavLink to='/top5' activeClassName='activeLink' className='links'>
-          <li>Top 5</li>
+        <NavLink to='/top3' activeClassName='activeLink' className='links'>
+          <li>Top 3</li>
         </NavLink>
-        <NavLink to='/news' activeClassName='activeLink' className='links'>
-          <li>News</li>
-        </NavLink>  
-        <NavLink to='/login' activeClassName='activeLink' className='links'>
-         <li>Login</li>
-        </NavLink>
-        
-        <Cart greeting={"Bienvenido"} name={user} />
+        <Cart greeting={"Cart:"} name={user} />
         <button onClick={handleVip} className="buttonVip">
           <p className={`to-${type}`}>{vip}</p>
         </button>

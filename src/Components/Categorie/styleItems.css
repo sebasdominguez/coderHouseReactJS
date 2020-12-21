@@ -9,12 +9,13 @@
 }
 
 .contCateg{
-    height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     background-color: #efe7e7;
+    padding-top: 20vh;
 }
 
 .cardItem{
@@ -26,4 +27,8 @@
 }
 .cardItem:hover{
   box-shadow: 0 0 20px rgba(255, 60, 60, 0.5); 
+}
+
+.greet{
+  font-family: monospace;
 }

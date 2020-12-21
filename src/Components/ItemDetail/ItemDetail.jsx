@@ -28,7 +28,7 @@ export default function ItemDetail({item, loading, contador, setContador, handle
                     </Carousel>
                    
                     <div className="contadorItem">
-                        <Contador min='0' max={item.stock} contador={contador} setContador={setContador}>Agregar</Contador>
+                        <Contador min={0} max={item.stock} contador={contador} setContador={setContador}>Agregar</Contador>
                     </div>
                     {
                         contador > 0 ? 
