@@ -9,23 +9,15 @@ export default function CountContainer({min, max, contador, setContador}) {
     const [disableMenosButton, setDisableMenosButton] = useState(true);
 
     const handleContador = (sign) => {
-        sign === '+'  && (contador === max) && setShow(true)
-        sign === '+' && (contador < max) && setContador(contador+1)
-        sign === '-' && (contador > min) && setContador(contador-1)
+        sign === '+'  && (contador === Number(max)) && setShow(true)
+        sign === '+' && (contador < Number(max)) && setContador(contador+1)
+        sign === '-' && (contador > Number(min)) && setContador(contador-1)
     }
 
     useEffect(()=>{
-        console.log("contador = a ", contador)
-        if (contador === max) { 
-            console.log("=max")
-            setDisableMasButton(true)
-        }
-        if (contador === min) {
-            console.log("=min")
-            setDisableMenosButton(true)
-        }
-        if ( (contador < max) && (contador > min) ) {
-            console.log("enmedio")
+        if (contador === Number(max)) setDisableMasButton(true)
+        if (contador === Number(min)) setDisableMenosButton(true)
+        if ( (contador < Number(max)) && (contador > Number(min)) ) {
             disableMasButton && setDisableMasButton(false)
             disableMenosButton && setDisableMenosButton(false)
         }

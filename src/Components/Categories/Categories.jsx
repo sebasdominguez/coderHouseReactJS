@@ -7,8 +7,8 @@ export default function Categories({list}) {
     return (
         <div className='categoryStyles'>
         {
-            list && list.categories && list.categories.map((cat)=>(
-                <Card style={{ width: '18rem', textAlign: 'center' }}>
+            list && list.categories && list.categories.map((cat, idx)=>(
+                <Card style={{ width: '18rem', textAlign: 'center' }} key={idx}>
                     <Card.Body>
                         <Card.Title style={{ textTransform: 'uppercase' }}>{cat.name}</Card.Title>
                         <Card.Link href={`/categories/${cat.id}`}>

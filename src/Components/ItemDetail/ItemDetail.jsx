@@ -16,8 +16,8 @@ export default function ItemDetail({item, loading, contador, setContador, handle
                     <Card.Title>{item.title}</Card.Title>
                     <Card.Text> {item.description}</Card.Text>
                     <Carousel interval={1000} pause={'hover'}>
-                        {item.pictures && item.pictures.map((picture)=>
-                            <Carousel.Item key={picture.id}>
+                        {item.pictures && item.pictures.map((picture, idx)=>
+                            <Carousel.Item key={idx}>
                                 <img
                                     className="item"
                                     src={picture.url}
